@@ -1,4 +1,4 @@
-class CreateSocialPlayers < ActiveRecord::Migration
+class CreateSocialplayers < ActiveRecord::Migration
   def up
     create_table :socialplayers do |t|
       t.string :id_str
