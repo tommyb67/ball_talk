@@ -54,6 +54,9 @@ GEM
       debugger-ruby_core_source (~> 1.2.3)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.3)
+    dotenv (0.8.0)
+    dotenv-rails (0.8.0)
+      dotenv (= 0.8.0)
     erubis (2.7.0)
     espn_rb (0.0.5)
     execjs (1.4.0)
@@ -158,6 +161,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 3.2.1)
+  dotenv-rails
   espn_rb (~> 0.0.5)
   jquery-rails
   meta_request
