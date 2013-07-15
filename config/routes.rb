@@ -1,6 +1,5 @@
 BallTalk::Application.routes.draw do
-  root to => 'ball_talk#index'
-  get '/' => 'ball_talk#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
