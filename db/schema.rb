@@ -29,13 +29,6 @@ ActiveRecord::Schema.define(:version => 20130715225256) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "socialplayers_users", :force => true do |t|
-    t.integer  "users_id"
-    t.integer  "socialplayers_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
-
   create_table "users", :force => true do |t|
     t.string   "user_name"
     t.string   "password"

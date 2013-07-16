@@ -1,0 +1,2 @@
+class SocialPlayer < ActionController
+end
