@@ -46,6 +46,8 @@ group :development, :test do
                             # https://github.com/banister/binding_of_caller
   gem 'meta_request'        # Supporting gem for Rails Panel (Google Chrome extension for Rails development).
                             # https://github.com/dejan/rails_panel/tree/master/meta_request
+  gem 'rails-erd'           # Diagrams your models. NOTE! $ brew install graphviz
+                            # https://github.com/voormedia/rails-erd
 end
 
 

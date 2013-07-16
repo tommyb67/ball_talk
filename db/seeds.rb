@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# write db:seed to import all player's name and id
+# everytime someone searches a name, grab the id and ask twitter about it
