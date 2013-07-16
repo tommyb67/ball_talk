@@ -1,6 +1,7 @@
 BallTalk::Application.routes.draw do
 
   get '/socialplayers/search' => 'socialplayers#search', as: 'socialplayer_search'
+  get '/socialplayers/show' => 'socialplayers#show', as: 'socialplayer_show'
   resources :socialplayers
   resources :users
 

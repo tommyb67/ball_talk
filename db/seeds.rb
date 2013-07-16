@@ -8,3 +8,18 @@
 
 # write db:seed to import all player's name and id
 # everytime someone searches a name, grab the id and ask twitter about it
+
+# delete all current records
+
+User.delete_all
+Socialplayer.delete_all
+Favorite.delete_all
+
+sp1 = Socialplayer.create(id_str: "1574282544", name: "Scott Rice", screenname: "ScottRice56", description: "This is the official twitter account for @MLB pitcher @ScottRice56 of the @Mets. #ElArroz")
+sp2 = Socialplayer.create(id_str: "1202941207", name: "Wil Nieves", screenname: "WilNieves27", description: "Catcher of the Arizona D-Backs / Puertorriqueño")
+sp1 = Socialplayer.create(id_str: "1195683247", name: "Dustin Pedroia", screenname: "15Lasershow", description: "Red Sox 2nd baseman.")
+
+
+
+
+

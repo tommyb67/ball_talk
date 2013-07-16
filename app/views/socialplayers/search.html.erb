@@ -1,0 +1,7 @@
+<h1>Social Players</h1>
+
+<%= form_tag("/socialplayers/search", method: "get") do %>
+  <%= label_tag(:q, "Search for your favorite Baseball Player:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
