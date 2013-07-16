@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem "twitter", "~> 4.8.1"
 gem "espn_rb", "~> 0.0.5"
 gem "mlb", "~> 0.6.3"
+gem "activerecord-import", "~> 0.3.1"
 
 
 group :development, :test do
