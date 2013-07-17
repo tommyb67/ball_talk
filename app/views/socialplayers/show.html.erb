@@ -1,9 +1,18 @@
 <h1>Social Players!</h1>
 
-<!<%= button_to "Favorite", user_favorite %>
+<%= button_to "Favorite", user_favorite_path %></br>
 
 <%= @socialplayer.name %> |
 <%= @socialplayer.screenname %></br>
 <%= @socialplayer.description %></br>
 
-<%= @tweets.inspect %>
+<% @tweets.each do |tweet| %>
+  <ul>
+    <li><%= tweet[:text] %></li>
+  </ul>
+    <% end %>
+
+
+
+
+

@@ -1,6 +1,11 @@
 class SocialplayersController < ApplicationController
+  def search_results
+    @socialplayers = Socialplayer.where("socialplayers.name like ?", "%#{params[:q]}%" )
+    #@tweets = Twitter.user_timeline(@socialplayer.screenname)
+    render 'index'
+  end
+
   def search
-    @socialplayers = Socialplayer.new
   end
 
   def index
@@ -12,9 +17,7 @@ class SocialplayersController < ApplicationController
     @tweets = Twitter.user_timeline(@socialplayer.screenname)
   end
 
-  def save
-    #@username
-    @socialplayer = Socialplayer #Twitter.user_timeline(@username)
+  def create
     socialplayer = Socialplayer.new
     socialplayer.id_str = @socialplayer.id_str
     socialplayer.name = @socialplayer.name
@@ -22,6 +25,9 @@ class SocialplayersController < ApplicationController
     socialplayer.des = @socialplayer.description
     socialplayer.save
     redirect_to user_favorite_path
+  end
+
+  def save
   end
 
 end

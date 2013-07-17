@@ -1,0 +1,14 @@
+<h2>Create a short user profile</h2>
+
+<%= form_tag('/New User') do %>
+<%= label_tag :username %>
+<%= text_field_tag :username %>
+<%= label_tag :password %>
+<%= password_field_tag :password %>
+<%= label_tag :email %>
+<%= text_field_tag :email %>
+<%= submit_tag 'Submit' %>
+<% end %>
+
+
+
