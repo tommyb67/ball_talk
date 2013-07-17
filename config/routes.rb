@@ -1,5 +1,7 @@
 BallTalk::Application.routes.draw do
 
+  get "sessions/new"
+
   get '/socialplayers/' => 'socialplayers#index', as: 'socialplayer_index'
   get '/socialplayers/search' => 'socialplayers#search', as: 'socialplayer_search'
   post 'socialplayers/:id/save' => 'socialplayers#save', as: 'socialplayer_save'
