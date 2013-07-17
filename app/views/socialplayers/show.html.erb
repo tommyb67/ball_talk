@@ -1,1 +1,10 @@
-<h1><%=  %>"Players Name"</h1>
+<h1>Social Players!</h1>
+
+<% @socialplayers.each do |socialplayer| %>
+<%= socialplayer.name %> |
+<%= socialplayer.screenname %></br>
+<%= socialplayer.description %></br>
+<% end %>
+
+
+
