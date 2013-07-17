@@ -3,12 +3,25 @@ class SocialplayersController < ApplicationController
     @socialplayers = Socialplayer.new
   end
 
-  def show
+  def index
     @socialplayers = Socialplayer.all
   end
 
+  def show
+    @socialplayer = Socialplayer.find(params[:id])
+    @tweets = Twitter.user_timeline(@socialplayer.screenname)
+  end
+
   def save
-    @socialplayer = Socialplayer
+    #@username
+    @socialplayer = Socialplayer #Twitter.user_timeline(@username)
+    socialplayer = Socialplayer.new
+    socialplayer.id_str = @socialplayer.id_str
+    socialplayer.name = @socialplayer.name
+    socialplayer.screenname = @socialplayer.screenname
+    socialplayer.des = @socialplayer.description
+    socialplayer.save
+    redirect_to user_favorite_path
   end
 
 end

@@ -1,10 +1,7 @@
 <h1>Social Players!</h1>
 
-<% @socialplayers.each do |socialplayer| %>
-<%= socialplayer.name %> |
-<%= socialplayer.screenname %></br>
-<%= socialplayer.description %></br>
-<% end %>
+<%= @socialplayer.name %> |
+<%= @socialplayer.screenname %></br>
+<%= @socialplayer.description %></br>
 
-
-
+<%= @tweets.inspect %>

@@ -1,0 +1,10 @@
+<h1>Social Players!</h1>
+
+<% @socialplayers.each do |socialplayer| %>
+<%= link_to socialplayer.name, socialplayer.screenname %> |
+<%= socialplayer.screenname %></br>
+<%= socialplayer.description %></br>
+<% end %>
+
+
+
