@@ -1,19 +1,5 @@
-l.each do |l|
-  l.id_str
-  l.name
-  l.screen_name
-  l.description
-  while l.next_cursor != nil
-  end
-end
+html: {class: 'form-horizontal'}
 
-@allplayers = {}
-
-l.each do |l|
-  [:id_str, :name, :screen_name, :description]
-  while l.next_cursor != nil
-  end
-end
 
 
 l.all.first.attrs[:name]
@@ -24,6 +10,20 @@ l.each do |user|
 
 
 sp = Socialplayer = [id_str: , name: , screenname: , description: ]
+
+
+l.each do |user|
+sp = Socialplayer.new
+sp.id_str = user[:id_str]
+sp.name = user[:name]
+sp.screenname = user[:screen_name]
+sp.description = user[:description]
+sp.save
+end
+
+
+<%= link_to("My Favortie Players", user_favorite_path) %>
+
 
 
 

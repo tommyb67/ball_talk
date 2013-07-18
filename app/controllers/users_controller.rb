@@ -4,6 +4,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
+  def favorite_show
+    @socialplayer = Socialplayer.find(params[:id])
+
   end
+
 end
