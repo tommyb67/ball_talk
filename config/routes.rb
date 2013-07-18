@@ -10,7 +10,8 @@ BallTalk::Application.routes.draw do
   post 'socialplayers/:id/save' => 'socialplayers#save', as: 'socialplayer_save'
   get '/socialplayers/show/:id' => 'socialplayers#show', as: 'socialplayer_show'
   # I believe that favorites should belong to the user.  I have to figure out the path
-  get '/users/favorites/show' => 'users#favorite', as: 'user_favorite'
+  #post 'users/favorite/:id' => 'users#favorite_show', as: 'user_favorite'
+  #get '/users/favorites/show' => 'users#favorite', as: 'user_favorite_show'
   resources :socialplayers
   resources :users
 

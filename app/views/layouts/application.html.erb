@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'navbar' unless @disable_nav %>
 
-<%= render 'navbar' %>
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <div class="span10">
+
+    </div>
+  </div>
+</div>
+
 
 <%= yield %>
 

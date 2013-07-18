@@ -1,5 +1,5 @@
-namespace :tweets do
-  desc "Gets Tweets"
+namespace :players do
+  desc "Gets Players"
   task :get => :environment do
     # Anything that goes in here, can be run with
     # rake tweets:get
@@ -9,4 +9,3 @@ namespace :tweets do
     binding.pry
   end
 end
-
