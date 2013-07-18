@@ -10,11 +10,11 @@ namespace :players do
       response = Twitter.list_members(slug:'players', owner_screen_name:'mlb', cursor: cursor)
       players << response.users
       cursor = response.next_cursor
-    end while not cursor.nil?
+    end while cursor < 200
     players.flatten!
     binding.pry
 
-    l.each do |user|
+    response.each do |user|
       sp = Socialplayer.new
       sp.id_str = user[:id_str]
       sp.name = user[:name]

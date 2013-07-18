@@ -25,7 +25,14 @@ end
 <%= link_to("My Favortie Players", user_favorite_path) %>
 
 
-
+l.each do |user|
+      sp = Socialplayer.new
+      sp.id_str = user[:id_str]
+      sp.name = user[:name]
+      sp.screenname = user[:screen_name]
+      sp.description = user[:description]
+      sp.save
+  end
 
 
 
