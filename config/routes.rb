@@ -1,7 +1,9 @@
 BallTalk::Application.routes.draw do
+  get 'sessions/new'
 
   get "log_in" => "sessions#new", as: "log_in"
   get "sign_up" => "users#new", as: "sign_up"
+  post "sign_up" => "users#new", as: "sign_up"
   post 'log_in'=> 'sessions#create'
   get "log_out" => "sessions#destroy", as: "log_out"
 
@@ -9,13 +11,15 @@ BallTalk::Application.routes.draw do
   get '/socialplayers/search' => 'socialplayers#search', as: 'socialplayer_search'
   get '/socialplayers/results' => 'socialplayers#search_results', as: 'socialplayers_results'
 
-  post 'socialplayers/:id/save' => 'socialplayers#save', as: 'socialplayer_save'
+  post '/socialplayers/:id/save' => 'socialplayers#save', as: 'socialplayer_save'
   get '/socialplayers/show/:id' => 'socialplayers#show', as: 'socialplayer_show'
   # I believe that favorites should belong to the user.  I have to figure out the path
-  post 'users/favorite/:id' => 'users#add_favorite', as: 'users_add_favorite'
+  post '/users/favorite/:id/save' => 'users#add_favorite', as: 'users_add_favorite'
   get '/users/favorites/:id' => 'users#favorite', as: 'user_favorite_show'
   resources :socialplayers
   resources :users
+  resources :sessions
+
 
   root :to => 'welcome#index'
 

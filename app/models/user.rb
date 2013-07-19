@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :user_name, :password, :email, :password_confirmation
   has_and_belongs_to_many :socialplayers
-  has_many :favorites
+  has_and_belongs_to_many :favorites
 
 # This gives us setter/getter methods
   # This might not be in the database

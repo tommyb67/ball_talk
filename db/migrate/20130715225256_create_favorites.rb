@@ -1,6 +1,6 @@
 class CreateFavorites < ActiveRecord::Migration
   def up
-    create_table :favorites do |t|
+    create_table :favorites, id: false do |t|
       t.belongs_to :user
       t.belongs_to :socialplayer
       t.timestamps
