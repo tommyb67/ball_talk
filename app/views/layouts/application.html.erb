@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'navbar' unless @disable_nav %>
+<%= render 'navbar' %>
 
   <div class="container-fluid">
   <div class="row-fluid">
@@ -23,8 +23,7 @@
 
 <%= yield %>
 
-<%= link_to "Login", log_in_path %> |
-<%= link_to "New User", sign_up_path %>
+
 
 </body>
 </html>

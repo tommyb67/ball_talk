@@ -29,6 +29,6 @@ class UsersController < ApplicationController
   end
 
   def favorite
-    @socialplayer = Socialplayer.find(params[:id])\
+    @socialplayer = Socialplayer.find(params[:id])
   end
 end

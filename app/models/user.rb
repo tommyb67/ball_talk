@@ -1,9 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :user_name, :password, :email, :password_confirmation
-  has_and_belongs_to_many :socialplayers
-  has_and_belongs_to_many :favorites
+has_and_belongs_to_many :socialplayers
+has_and_belongs_to_many :favorites
 
-# This gives us setter/getter methods
+  # This gives us setter/getter methods
   # This might not be in the database
   attr_accessor :password
   before_save :encrypt_password
@@ -18,6 +17,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   # Allows mass assignment of these
+  attr_accessible :user_name, :email, :password, :password_confirmation
 
   # I can only call this with
   # u = User.first
